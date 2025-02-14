@@ -1,0 +1,184 @@
+/* Style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définition des variables de couleur pour faciliter la gestion des couleurs */
+:root {
+    --primary-color: #FF6F00; /* Orange dominant */
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --hover-color: #e65100; /* Plus foncé pour les effets */
+    --highlight-color: #FFAB40; /* Pour surligner des éléments */
+    --button-color: #FF6F00;
+    --button-hover-color: #e65100;
+}
+
+/* Style global du body, police et couleur de fond */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color); /* Couleur de fond générale */
+    color: var(--text-color); /* Couleur de texte */
+    line-height: 1.6;
+}
+
+/* Style pour la barre de navigation */
+.navbar {
+    background-color: var(--primary-color); /* Couleur de fond orange */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Effet de survol sur les liens de la navbar */
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+    color: var(--primary-color); /* Couleur du titre */
+}
+
+/* Formulaire de recherche */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Espacement sous le formulaire */
+}
+
+/* Style de l'input de recherche */
+form input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 30px; /* Bordure arrondie */
+    width: 300px;
+    margin: 0 10px;
+    transition: border 0.3s ease; /* Effet de transition lors du focus */
+}
+
+/* Effet de focus sur le champ de recherche */
+form input[type="text"]:focus {
+    border-color: var(--primary-color); /* Changement de la couleur de la bordure */
+}
+
+/* Conteneur des vidéos */
+#video-container {
+    display: grid; /* Utilisation de grid pour disposer les vidéos */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Mise en colonne flexible */
+    gap: 30px; /* Espacement entre les vidéos */
+    padding: 0 20px;
+}
+
+/* Style des vidéos */
+.video {
+    background-color: white;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets */
+}
+
+/* Effet de survol sur chaque vidéo */
+.video:hover {
+    transform: translateY(-10px); /* Montée légère au survol */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Style du titre des vidéos */
+.video h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color); /* Couleur de l'orange pour les titres */
+    margin-bottom: 15px;
+    text-transform: capitalize; /* Majuscule sur la première lettre de chaque mot */
+}
+
+/* Style des miniatures des vidéos */
+.video img {
+    width: 100%;
+    max-width: 150px; /* Taille de l'image réduite */
+    margin-bottom: 15px;
+    border-radius: 8px; /* Coins arrondis de l'image */
+    transition: transform 0.3s ease; /* Effet de zoom sur l'image */
+}
+
+/* Effet de zoom sur l'image au survol */
+.video img:hover {
+    transform: scale(1.05); /* Zoom léger sur l'image */
+}
+
+/* Style pour les vidéos (éléments vidéo intégrés) */
+.video video {
+    width: 100%;
+    border-radius: 8px; /* Coins arrondis */
+    max-width: 320px;
+    margin-bottom: 15px;
+}
+
+/* Style pour le texte sous chaque vidéo (date et nom de l'utilisateur) */
+.video p {
+    font-size: 0.9rem;
+    color: #666; /* Couleur gris pour le texte secondaire */
+    margin-top: 10px;
+}
+
+.video p span {
+    font-weight: bold; /* Mise en évidence du nom de l'utilisateur */
+}
+
+/* Si aucune vidéo n'est trouvée */
+#video-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999; /* Gris clair pour le texte */
+}
+
+/* Boutons et interactions */
+button, .btn {
+    background-color: var(--button-color); /* Fond du bouton en orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px; /* Boutons avec coins arrondis */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Effet de transition pour les boutons */
+}
+
+/* Effet de survol pour les boutons */
+button:hover, .btn:hover {
+    background-color: var(--button-hover-color); /* Couleur plus foncée au survol */
+}
+
+/* Animation légère lors du chargement de la page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out; /* Animation d'apparition de la page */
+}

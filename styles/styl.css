@@ -1,0 +1,196 @@
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ff6b6b;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6b6b;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Section recherche */
+/* Section recherche */
+.search-container {
+  background-image: url('../img/cooking-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.search-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  display: flex; /* Ajout de flex pour aligner le champ et le bouton */
+  align-items: center; /* Centre verticalement */
+  background: rgba(255, 255, 255, 0.95); /* Fond pour la barre de recherche */
+  border-radius: 50px; /* Bord arrondi */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre */
+  overflow: hidden; /* Cache les débordements */
+}
+
+.search-bar input {
+  flex: 1; /* Prend tout l'espace disponible */
+  padding: 1.2rem 1.2rem 1.2rem 3rem; /* Ajustement du padding */
+  border: none;
+  background: transparent; /* Fond transparent */
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search-bar input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.search-bar i {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4800ff;
+}
+
+.search-bar button {
+  padding: 1.2rem 2rem;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 0 50px 50px 0; /* Bord arrondi uniquement à droite */
+}
+
+.search-bar button:hover {
+  background: #e65a5a;
+}
+
+/* Grille de vidéos */
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+  gap: 1.5rem; /* Espace entre les vidéos */
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  padding-bottom: 56.25%; /* Ratio 16:9 pour la miniature */
+  background: #e0e0e0; /* Couleur de fond par défaut */
+  overflow: hidden;
+}
+
+.thumbnail img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
