@@ -1,0 +1,92 @@
+/* Style global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #121212 30%, #1a1a1a 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Titre de la page */
+h2 {
+    color: #ff8c00;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Message de notification */
+p {
+    color: #ff8c00;
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Tableau des vidéos */
+table {
+    width: 80%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: #333;
+    color: #ff8c00;
+}
+
+table tr:nth-child(even) {
+    background-color: #222;
+}
+
+table tr:hover {
+    background-color: #333;
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
+}
+
+table a {
+    color: #ff8c00;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ff8c00;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+table a:hover {
+    background-color: #ff8c00;
+    color: #222;
+}
+
+/* Vidéo */
+video {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Lien de déconnexion */
+a {
+    color: #ff8c00;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+a:hover {
+    color: #ff6a00;
+    text-decoration: underline;
+}

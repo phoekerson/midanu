@@ -1,0 +1,108 @@
+/* Style global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #121212 30%, #1a1a1a 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Titre de la page */
+h2 {
+    color: #ff8c00;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulaire de connexion */
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet de survol sur le formulaire */
+form:hover {
+    transform: translateY(-10px);
+}
+
+/* Labels */
+label {
+    font-size: 1.1rem;
+    color: #ff8c00;
+    font-weight: 600;
+}
+
+/* Champs de saisie */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 2px solid #ff8c00;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus sur les champs */
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff6a00;
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
+    outline: none;
+}
+
+/* Bouton de soumission */
+button {
+    padding: 12px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet sur le bouton */
+button:hover {
+    background-color: #ff6a00;
+    transform: translateY(-3px);
+}
+
+/* Message d'erreur */
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Lien de retour */
+a {
+    text-align: center;
+    color: #ff8c00;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6a00;
+    text-decoration: underline;
+}
